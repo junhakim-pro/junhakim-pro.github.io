@@ -4,439 +4,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Junha Kim - Sales & Business Development Leader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
-            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
-            margin-bottom: 30px;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #333, #000);
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48px;
-            font-weight: bold;
-            color: white;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            color: #000;
-        }
-
-        .title {
-            font-size: 1.3rem;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #444;
-        }
-
-        .main-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 30px;
-        }
-
-        .sidebar {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            height: fit-content;
-        }
-
-        .content {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        .section {
-            margin-bottom: 30px;
-        }
-
-        .section h2 {
-            color: #000;
-            border-bottom: 3px solid #333;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-        }
-
-        .achievements {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .achievement-card {
-            background: linear-gradient(135deg, #333, #000);
-            color: white;
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-            transform: translateY(0);
-            transition: transform 0.3s ease;
-        }
-
-        .achievement-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .achievement-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            display: block;
-        }
-
-        .achievement-text {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        .experience-item {
-            margin-bottom: 30px;
-            padding: 25px;
-            background: #f8f9fa;
-            border-radius: 15px;
-            border-left: 5px solid #333;
-        }
-
-        .job-title {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #000;
-            margin-bottom: 5px;
-        }
-
-        .company {
-            color: #333;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .duration {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-
-        .job-description {
-            color: #444;
-        }
-
-        .job-description ul {
-            margin-left: 20px;
-            margin-top: 10px;
-        }
-
-        .job-description li {
-            margin-bottom: 8px;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-        }
-
-        .skill-item {
-            background: linear-gradient(135deg, #333, #000);
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            font-weight: 600;
-        }
-
-        .languages {
-            display: grid;
-            gap: 15px;
-        }
-
-        .language-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 10px;
-        }
-
-        .language-level {
-            background: #333;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            .main-content {
-                grid-template-columns: 1fr;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .contact-info {
-                gap: 15px;
-            }
-            
-            .achievements {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .cta-section {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
-            margin-top: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #333, #000);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            margin: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
+        .gradient-bg {
+            background: linear-gradient(135deg, #4b5563 0%, #1f2937 100%);
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <header class="header">
-            <div class="profile-img">JK</div>
-            <h1>Junha Kim</h1>
-            <div class="title">Senior Sales & Business Development Leader | SaaS | Enterprise Solutions</div>
-            <div class="contact-info">
-                <div class="contact-item">📧 jkimgnj@gmail.com</div>
-                <div class="contact-item">📍 Seoul, South Korea</div>
-                <div class="contact-item">🔗 <a href="https://www.linkedin.com/in/junhakim/" target="_blank" style="color: inherit; text-decoration: none;">LinkedIn: linkedin.com/in/junhakim</a></div>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+        <!-- Header Section -->
+        <header class="bg-white dark:bg-gray-800 rounded-3xl p-6 md:p-10 lg:p-12 mb-8 shadow-xl text-center border border-gray-200 dark:border-gray-700">
+            <div class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center text-white text-5xl md:text-6xl font-bold mb-4 shadow-inner">
+                JK
+            </div>
+            <h1 class="text-3xl md:text-5xl font-bold mb-2 text-gray-900 dark:text-white">Junha Kim</h1>
+            <p class="text-lg md:text-xl text-gray-500 dark:text-gray-400 font-medium">Senior Sales & Business Development Leader | B2B SaaS | Enterprise Solutions</p>
+            
+            <!-- Contact Info -->
+            <div class="flex flex-wrap justify-center gap-4 mt-6 text-sm md:text-base text-gray-600 dark:text-gray-400">
+                <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 dark:text-gray-400" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 18.067C.057 18.067 1.258 19.333 4.298 22.25c2.979 2.868 6.554 2.457 7.702 2.417c1.148.04 4.823.451 7.702-2.417c3.04-2.917 4.241-4.183 4.241-4.183c-.04-1.396-.135-2.75-.414-4.22c-.279-1.47-.843-3.132-1.843-4.132c-1.001-1.001-2.663-1.565-4.132-1.843c-1.47-.279-2.824-.374-4.22-.414c-1.396.04-2.75.135-4.22.414c-1.47.279-3.132.843-4.132 1.843c-1.001 1.001-1.565 2.663-1.843 4.132c-.279 1.47-.414 2.824-.414 4.22zm10.704-5.067a2.203 2.203 0 00-2.203 2.203a2.203 2.203 0 002.203 2.203a2.203 2.203 0 002.203-2.203a2.203 2.203 0 00-2.203-2.203zM12 9a6.002 6.002 0 00-6 6a6.002 6.002 0 006 6a6.002 6.002 0 006-6a6.002 6.002 0 00-6-6zm-10.742-1.309a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg>
+                    <span>jkimgnj@gmail.com</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 dark:text-gray-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+                    <span>Seoul, South Korea</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 dark:text-gray-400" viewBox="0 0 24 24" fill="currentColor"><path d="M2.26 18.062a.75.75 0 01-.105-.989l2.843-4.846a.75.75 0 011.233-.03l.915 1.055a.75.75 0 01-.03 1.233l-2.843 4.846a.75.75 0 01-.989.105zM5.394 6.945a.75.75 0 01-.03 1.233L2.52 13.024a.75.75 0 01-1.233-.03l-1.055-.915a.75.75 0 01.03-1.233l2.843-4.846a.75.75 0 01.989-.105zm16.355 1.053a.75.75 0 01-.03-1.233l-2.843-4.846a.75.75 0 01-1.233-.03l-.915 1.055a.75.75 0 01.03 1.233l2.843 4.846a.75.75 0 01.989.105zM18.606 17.053a.75.75 0 01-.03-1.233l-2.843-4.846a.75.75 0 01-1.233-.03l-.915 1.055a.75.75 0 01.03 1.233l2.843 4.846a.75.75 0 01.989.105zM22.427 12l1.055-.915a.75.75 0 01.03-1.233l-2.843-4.846a.75.75 0 01-1.233-.03l-1.055 1.233a.75.75 0 01.03 1.233l2.843 4.846a.75.75 0 01.989.105zM12 2.5a.75.75 0 01-.03-1.233L10.02 0.42a.75.75 0 01-.989.105L6.188 3.37a.75.75 0 01.105.989l2.843 4.846a.75.75 0 011.233.03l1.055-1.233a.75.75 0 01-.03-1.233zM10.02 2.5a.75.75 0 01-.989-.105L6.188 5.37a.75.75 0 01.105.989l2.843 4.846a.75.75 0 011.233.03l1.055-1.233a.75.75 0 01-.03-1.233zM12 11.5a.75.75 0 01-.03 1.233L10.02 16.024a.75.75 0 01-.989.105L6.188 13.17a.75.75 0 01.105-.989l2.843-4.846a.75.75 0 011.233.03l.915 1.055a.75.75 0 01-.03 1.233z"/><path d="M12 9a3 3 0 100 6a3 3 0 000-6zm0 1.5a1.5 1.5 0 100 3a1.5 1.5 0 000-3z"/></svg>
+                    <a href="https://www.linkedin.com/in/junhakim/" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-200">
+                        LinkedIn: linkedin.com/in/junhakim
+                    </a>
+                </div>
             </div>
         </header>
 
-        <div class="achievements">
-            <div class="achievement-card">
-                <span class="achievement-number">15+</span>
-                <span class="achievement-text">Years in B2B SaaS Sales</span>
-            </div>
-            <div class="achievement-card">
-                <span class="achievement-number">107%</span>
-                <span class="achievement-text">Latest Quota Achievement</span>
-            </div>
-            <div class="achievement-card">
-                <span class="achievement-number">120%</span>
-                <span class="achievement-text">Net Revenue Retention</span>
-            </div>
-            <div class="achievement-card">
-                <span class="achievement-number">30</span>
-                <span class="achievement-text">Sales Team Members Led</span>
-            </div>
-        </div>
-
-        <div class="main-content">
-            <aside class="sidebar">
-                <div class="section">
-                    <h2>Core Competencies</h2>
-                    <div class="skills-grid">
-                        <div class="skill-item">Enterprise Sales</div>
-                        <div class="skill-item">SaaS Solutions</div>
-                        <div class="skill-item">Team Leadership</div>
-                        <div class="skill-item">Revenue Operations</div>
-                        <div class="skill-item">MEDDPICC</div>
-                        <div class="skill-item">Salesforce</div>
-                        <div class="skill-item">Account Management</div>
-                        <div class="skill-item">Business Development</div>
-                    </div>
-
-                    <div class="section">
-                        <h2>International Background</h2>
-                        <p><strong>Global Experience:</strong> 7 years living in the United States and 5 years in China, bringing deep cross-cultural understanding and global market insights to sales strategies and client relationships.</p>
-                    </div>
-
-                    <div class="section">
-                        <h2>Personal</h2>
-                        <p><strong>Athletics:</strong> Passionate runner with a recent half-marathon personal record of 1:37:28. While running is my current primary focus, I've also enjoyed Brazilian Jiu-Jitsu, swimming, CrossFit, and cycling over the years.</p>
-                        <p><strong>Family:</strong> Proud father of two sons, balancing a demanding career with active parenting and personal fitness goals.</p>
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Left Column (Summary, Skills, Languages, Education) -->
+            <aside class="col-span-1 space-y-8">
+                <!-- Core Competencies -->
+                <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
+                    <h2 class="text-xl md:text-2xl font-bold mb-4 border-b-2 border-gray-900 dark:border-gray-500 pb-2">Core Competencies</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-medium text-sm">Enterprise Sales</span>
+                        <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-medium text-sm">B2B SaaS</span>
+                        <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-medium text-sm">Team Leadership</span>
+                        <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-medium text-sm">Revenue Operations</span>
+                        <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-medium text-sm">MEDDPICC</span>
+                        <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-medium text-sm">Salesforce</span>
+                        <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-medium text-sm">Business Development</span>
                     </div>
                 </div>
 
-                <div class="section">
-                    <h2>Languages</h2>
-                    <div class="languages">
-                        <div class="language-item">
+                <!-- Languages -->
+                <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
+                    <h2 class="text-xl md:text-2xl font-bold mb-4 border-b-2 border-gray-900 dark:border-gray-500 pb-2">Languages</h2>
+                    <ul class="space-y-4 text-sm md:text-base">
+                        <li class="flex justify-between items-center bg-gray-50 dark:bg-gray-700 rounded-xl p-4">
                             <span>Korean</span>
-                            <span class="language-level">Native</span>
-                        </div>
-                        <div class="language-item">
+                            <span class="px-3 py-1 bg-gray-800 text-white rounded-full font-semibold text-xs">Native</span>
+                        </li>
+                        <li class="flex justify-between items-center bg-gray-50 dark:bg-gray-700 rounded-xl p-4">
                             <span>English</span>
-                            <span class="language-level">Fluent</span>
-                        </div>
-                        <div class="language-item">
+                            <span class="px-3 py-1 bg-gray-800 text-white rounded-full font-semibold text-xs">Fluent</span>
+                        </li>
+                        <li class="flex justify-between items-center bg-gray-50 dark:bg-gray-700 rounded-xl p-4">
                             <span>Mandarin</span>
-                            <span class="language-level">Conversational</span>
-                        </div>
-                    </div>
+                            <span class="px-3 py-1 bg-gray-800 text-white rounded-full font-semibold text-xs">Conversational</span>
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="section">
-                    <h2>Education</h2>
-                    <div style="padding: 15px; background: #f8f9fa; border-radius: 10px;">
-                        <strong>B.A. in Economics</strong><br>
-                        Indiana University<br>
-                        Bloomington, IN, US<br>
-                        <em>2005 - 2009</em>
+                <!-- Education -->
+                <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
+                    <h2 class="text-xl md:text-2xl font-bold mb-4 border-b-2 border-gray-900 dark:border-gray-500 pb-2">Education</h2>
+                    <div class="bg-gray-50 dark:bg-gray-700 rounded-xl p-4 text-sm md:text-base">
+                        <p class="font-bold">B.A. in Economics</p>
+                        <p>Indiana University, Bloomington, IN, US</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-xs mt-1">2005 - 2009</p>
+                    </div>
+                </div>
+                
+                <!-- Personal -->
+                <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
+                    <h2 class="text-xl md:text-2xl font-bold mb-4 border-b-2 border-gray-900 dark:border-gray-500 pb-2">Personal</h2>
+                    <div class="space-y-4">
+                        <p class="text-sm md:text-base">
+                            <strong>Athletics:</strong> Passionate runner with a recent half-marathon personal record of 1:37:28. While running is my current primary focus, I've also enjoyed Brazilian Jiu-Jitsu, swimming, CrossFit, and cycling over the years.
+                        </p>
+                        <p class="text-sm md:text-base">
+                            <strong>Family:</strong> Proud father of two sons, balancing a demanding career with active parenting and personal fitness goals.
+                        </p>
                     </div>
                 </div>
             </aside>
 
-            <main class="content">
-                <div class="section">
-                    <h2>Professional Summary</h2>
-                    <p>Accomplished B2B SaaS Sales Leader with over 15 years of experience delivering exceptional revenue growth and building high-performing teams in competitive global markets. Proven track record of exceeding sales targets, managing strategic enterprise accounts, and driving business development initiatives across Korean and international markets.</p>
+            <!-- Right Column (Experience) -->
+            <main class="lg:col-span-2">
+                <!-- Professional Summary -->
+                <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-xl mb-8 border border-gray-200 dark:border-gray-700">
+                    <h2 class="text-xl md:text-2xl font-bold mb-4 border-b-2 border-gray-900 dark:border-gray-500 pb-2">Professional Summary</h2>
+                    <p class="text-sm md:text-base">
+                        Accomplished B2B SaaS Sales Leader with over 15 years of experience delivering exceptional revenue growth and building high-performing teams in competitive global markets. Proven track record of exceeding sales targets, managing strategic enterprise accounts, and driving business development initiatives across Korean and international markets.
+                    </p>
                 </div>
-
-                <div class="section">
-                    <h2>Professional Experience</h2>
+                
+                <!-- Experience Cards Grid -->
+                <div class="grid grid-cols-1 gap-8">
+                    <!-- Experience 1 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                            <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white">Senior Sales Manager</h3>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">October 2023 - Present (1 yr 11 mos)</span>
+                        </div>
+                        <p class="text-md text-gray-700 dark:text-gray-300 font-medium mb-4">S&P Global Mobility Division</p>
+                        <ul class="list-disc list-inside space-y-2 text-sm md:text-base text-gray-700 dark:text-gray-300">
+                            <li><strong>Exceeded net new sales target by 107%</strong> in first year through consultative, solution-selling approach.</li>
+                            <li>Managed strategic accounts including top Korean conglomerates (Samsung, SK), identifying and addressing their core business objectives.</li>
+                            <li>Collaborated with service delivery teams to ensure smooth handoffs and boost customer satisfaction, creating success cases.</li>
+                        </ul>
+                    </div>
                     
-                    <div class="experience-item">
-                        <div class="job-title">Senior Sales Manager</div>
-                        <div class="company">S&P Global Mobility Division</div>
-                        <div class="duration">October 2023 - Present (1 yr 11 mos)</div>
-                        <div class="job-description">
-                            <ul>
-                                <li><strong>Exceeded net new sales target by 107%</strong> in first year through consultative, solution-selling approach</li>
-                                <li>Manage strategic accounts including top Korean conglomerates (Samsung, SK)</li>
-                                <li>Collaborate with service delivery teams to ensure smooth handoffs and boost customer satisfaction</li>
-                            </ul>
+                    <!-- Experience 2 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                            <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white">Director of Revenue Operations</h3>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">July 2021 - October 2023 (2 yrs 3 mos)</span>
                         </div>
+                        <p class="text-md text-gray-700 dark:text-gray-300 font-medium mb-4">MarqVision (AI-powered Brand Protection SaaS) <br class="md:hidden"> <span class="text-sm text-gray-500 dark:text-gray-400 italic">(Formerly Head of Sales, Director of Account Management)</span></p>
+                        <ul class="list-disc list-inside space-y-2 text-sm md:text-base text-gray-700 dark:text-gray-300">
+                            <li><strong>Led 30-member sales team,</strong> architecting a scalable sales process that contributed to a 300% revenue increase and a $20M Series A funding round.</li>
+                            <li><strong>Achieved 120% Net Revenue Retention (NRR)</strong> by focusing on customer success and expanding solutions within the existing client base.</li>
+                            <li>Enhanced sales forecasting and client management by implementing Salesforce and introducing the MEDDPICC methodology.</li>
+                        </ul>
                     </div>
-
-                    <div class="experience-item">
-                        <div class="job-title">Director of Revenue Operations</div>
-                        <div class="company">MarqVision (LegalTech Startup)</div>
-                        <div class="duration">July 2021 - October 2023 (2 yrs 3 mos)</div>
-                        <div class="job-description">
-                            <p><em>Wore multiple hats in startup environment: Head of Sales, Director of Account Management, Revenue Operations</em></p>
-                            <ul>
-                                <li><strong>Led 30-member sales team</strong> contributing to 300% revenue increase and $20M Series A funding</li>
-                                <li><strong>Achieved 120% Net Revenue Retention (NRR)</strong> through customer success focus</li>
-                                <li>Architected scalable sales processes from ground up, solving complex IP protection challenges</li>
-                                <li>Implemented Salesforce and MEDDPICC methodology for enhanced forecasting and pipeline management</li>
-                            </ul>
+                    
+                    <!-- Experience 3 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                            <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white">Senior Account Manager</h3>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">November 2018 - June 2021 (2 yrs 7 mos)</span>
                         </div>
+                        <p class="text-md text-gray-700 dark:text-gray-300 font-medium mb-4">Data.Ai (formerly App Annie)</p>
+                        <ul class="list-disc list-inside space-y-2 text-sm md:text-base text-gray-700 dark:text-gray-300">
+                            <li>Acted as a trusted advisor to key Korean stakeholders, negotiating multi-year, high-value contracts.</li>
+                            <li>Exceeded annual sales quotas despite pandemic-related challenges by understanding shifting customer needs.</li>
+                            <li>**Recognized as APAC Brand Ambassador** for exceptional performance and fostering strong, referenceable client relationships.</li>
+                        </ul>
                     </div>
-
-                    <div class="experience-item">
-                        <div class="job-title">Senior Account Manager</div>
-                        <div class="company">Data.Ai (formerly App Annie)</div>
-                        <div class="duration">November 2018 - June 2021 (2 yrs 7 mos)</div>
-                        <div class="job-description">
-                            <ul>
-                                <li>Exceeded annual sales quotas despite pandemic challenges</li>
-                                <li><strong>Recognized as APAC Brand Ambassador</strong> for exceptional performance</li>
-                                <li>Negotiated multi-year, high-value contracts with key Korean stakeholders</li>
-                            </ul>
+                    
+                    <!-- Experience 4 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                            <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white">Client Development Manager</h3>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">April 2018 - October 2018 (6 mos)</span>
                         </div>
+                        <p class="text-md text-gray-700 dark:text-gray-300 font-medium mb-4">Bidalgo (acquired by IronSource)</p>
+                        <ul class="list-disc list-inside space-y-2 text-sm md:text-base text-gray-700 dark:text-gray-300">
+                            <li>Contributed to a **400% revenue increase** within six months by driving impactful, solution-oriented initiatives.</li>
+                            <li>Expanded APAC market presence by developing localized engagement strategies for Korea and China.</li>
+                        </ul>
                     </div>
-
-                    <div class="experience-item">
-                        <div class="job-title">Client Development Manager</div>
-                        <div class="company">Bidalgo (acquired by IronSource)</div>
-                        <div class="duration">April 2018 - October 2018 (6 mos)</div>
-                        <div class="job-description">
-                            <ul>
-                                <li><strong>Contributed to 400% revenue increase</strong> within six months</li>
-                                <li>Expanded APAC market presence (Korea & China) through localized engagement strategies</li>
-                            </ul>
+                    
+                    <!-- Experience 5 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                            <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white">Account Manager / Customer Success Manager</h3>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">August 2014 - March 2018 (3 yrs 7 mos)</span>
                         </div>
+                        <p class="text-md text-gray-700 dark:text-gray-300 font-medium mb-4">Data.Ai (App Annie)</p>
+                        <ul class="list-disc list-inside space-y-2 text-sm md:text-base text-gray-700 dark:text-gray-300">
+                            <li>As an initial team member in Korea, played a pivotal role in establishing the company's services.</li>
+                            <li>Demonstrated product value and aligned it with the needs of the emerging mobile market.</li>
+                        </ul>
                     </div>
-
-                    <div class="experience-item">
-                        <div class="job-title">Account Manager / Customer Success Manager</div>
-                        <div class="company">Data.Ai (App Annie)</div>
-                        <div class="duration">August 2014 - March 2018 (3 yrs 7 mos)</div>
-                        <div class="job-description">
-                            <ul>
-                                <li>As initial team member in Korea, established company services in emerging mobile market</li>
-                                <li>Demonstrated product value and aligned solutions with local market needs</li>
-                            </ul>
+                    
+                    <!-- Experience 6 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                            <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white">Senior Consultant, Advanced Analytics</h3>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">November 2011 - August 2014 (2 yrs 9 mos)</span>
                         </div>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="job-title">Senior Consultant, Advanced Analytics</div>
-                        <div class="company">The Nielsen Company</div>
-                        <div class="duration">November 2011 - August 2014 (2 yrs 9 mos)</div>
-                        <div class="job-description">
-                            <ul>
-                                <li>Led analytics team delivering complex data-driven solutions for enterprise clients</li>
-                                <li>Translated data into actionable strategies for Tobacco, FMCG, and Automotive industries</li>
-                            </ul>
-                        </div>
+                        <p class="text-md text-gray-700 dark:text-gray-300 font-medium mb-4">The Nielsen Company</p>
+                        <ul class="list-disc list-inside space-y-2 text-sm md:text-base text-gray-700 dark:text-gray-300">
+                            <li>Led a team to deliver complex analytics-driven solutions, translating data into actionable strategies for clients.</li>
+                            <li>Specialized in the Tobacco, FMCG, and Automotive industries.</li>
+                        </ul>
                     </div>
                 </div>
             </main>
