@@ -48,71 +48,13 @@
             </div>
         </header>
 
-        <!-- Main Content Grid -->
+        <!-- Main Content Grid - The order of the two columns has been swapped for better mobile stacking -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <!-- Left Column (Summary, Skills, Languages, Education) -->
-            <aside class="col-span-1 space-y-8">
-                <!-- Core Competencies -->
-                <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
-                    <h2 class="text-xl md:text-2xl font-bold mb-4 border-b-2 border-gray-900 dark:border-gray-500 pb-2">Core Competencies</h2>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-medium text-sm">Enterprise Sales</span>
-                        <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-medium text-sm">B2B SaaS</span>
-                        <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-medium text-sm">Team Leadership</span>
-                        <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-medium text-sm">Revenue Operations</span>
-                        <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-medium text-sm">MEDDPICC</span>
-                        <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-medium text-sm">Salesforce</span>
-                        <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-medium text-sm">Business Development</span>
-                    </div>
-                </div>
-
-                <!-- Languages -->
-                <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
-                    <h2 class="text-xl md:text-2xl font-bold mb-4 border-b-2 border-gray-900 dark:border-gray-500 pb-2">Languages</h2>
-                    <ul class="space-y-4 text-sm md:text-base">
-                        <li class="flex justify-between items-center bg-gray-50 dark:bg-gray-700 rounded-xl p-4">
-                            <span>Korean</span>
-                            <span class="px-3 py-1 bg-gray-800 text-white rounded-full font-semibold text-xs">Native</span>
-                        </li>
-                        <li class="flex justify-between items-center bg-gray-50 dark:bg-gray-700 rounded-xl p-4">
-                            <span>English</span>
-                            <span class="px-3 py-1 bg-gray-800 text-white rounded-full font-semibold text-xs">Fluent</span>
-                        </li>
-                        <li class="flex justify-between items-center bg-gray-50 dark:bg-gray-700 rounded-xl p-4">
-                            <span>Mandarin</span>
-                            <span class="px-3 py-1 bg-gray-800 text-white rounded-full font-semibold text-xs">Conversational</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Education -->
-                <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
-                    <h2 class="text-xl md:text-2xl font-bold mb-4 border-b-2 border-gray-900 dark:border-gray-500 pb-2">Education</h2>
-                    <div class="bg-gray-50 dark:bg-gray-700 rounded-xl p-4 text-sm md:text-base">
-                        <p class="font-bold">B.A. in Economics</p>
-                        <p>Indiana University, Bloomington, IN, US</p>
-                        <p class="text-gray-500 dark:text-gray-400 text-xs mt-1">2005 - 2009</p>
-                    </div>
-                </div>
-                
-                <!-- Personal -->
-                <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
-                    <h2 class="text-xl md:text-2xl font-bold mb-4 border-b-2 border-gray-900 dark:border-gray-500 pb-2">Personal</h2>
-                    <div class="space-y-4">
-                        <p class="text-sm md:text-base">
-                            <strong>Athletics:</strong> Passionate runner with a recent half-marathon personal record of 1:37:28. While running is my current primary focus, I've also enjoyed Brazilian Jiu-Jitsu, swimming, CrossFit, and cycling over the years.
-                        </p>
-                        <p class="text-sm md:text-base">
-                            <strong>Family:</strong> Proud father of two sons, balancing a demanding career with active parenting and personal fitness goals.
-                        </p>
-                    </div>
-                </div>
-            </aside>
-
-            <!-- Right Column (Experience) -->
-            <main class="lg:col-span-2">
+            
+            <!-- Professional Summary and Experience (Left Column on large screen, Top on mobile) -->
+            <main class="lg:col-span-2 space-y-8">
                 <!-- Professional Summary -->
-                <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-xl mb-8 border border-gray-200 dark:border-gray-700">
+                <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
                     <h2 class="text-xl md:text-2xl font-bold mb-4 border-b-2 border-gray-900 dark:border-gray-500 pb-2">Professional Summary</h2>
                     <p class="text-sm md:text-base">
                         Accomplished B2B SaaS Sales Leader with over 15 years of experience delivering exceptional revenue growth and building high-performing teams in competitive global markets. Proven track record of exceeding sales targets, managing strategic enterprise accounts, and driving business development initiatives across Korean and international markets.
@@ -203,6 +145,65 @@
                     </div>
                 </div>
             </main>
+
+            <!-- Left Column (Summary, Skills, Languages, Education) -->
+            <aside class="col-span-1 space-y-8">
+                <!-- Core Competencies -->
+                <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
+                    <h2 class="text-xl md:text-2xl font-bold mb-4 border-b-2 border-gray-900 dark:border-gray-500 pb-2">Core Competencies</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-medium text-sm">Enterprise Sales</span>
+                        <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-medium text-sm">B2B SaaS</span>
+                        <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-medium text-sm">Team Leadership</span>
+                        <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-medium text-sm">Revenue Operations</span>
+                        <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-medium text-sm">MEDDPICC</span>
+                        <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-medium text-sm">Salesforce</span>
+                        <span class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full font-medium text-sm">Business Development</span>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
+                    <h2 class="text-xl md:text-2xl font-bold mb-4 border-b-2 border-gray-900 dark:border-gray-500 pb-2">Languages</h2>
+                    <ul class="space-y-4 text-sm md:text-base">
+                        <li class="flex justify-between items-center bg-gray-50 dark:bg-gray-700 rounded-xl p-4">
+                            <span>Korean</span>
+                            <span class="px-3 py-1 bg-gray-800 text-white rounded-full font-semibold text-xs">Native</span>
+                        </li>
+                        <li class="flex justify-between items-center bg-gray-50 dark:bg-gray-700 rounded-xl p-4">
+                            <span>English</span>
+                            <span class="px-3 py-1 bg-gray-800 text-white rounded-full font-semibold text-xs">Fluent</span>
+                        </li>
+                        <li class="flex justify-between items-center bg-gray-50 dark:bg-gray-700 rounded-xl p-4">
+                            <span>Mandarin</span>
+                            <span class="px-3 py-1 bg-gray-800 text-white rounded-full font-semibold text-xs">Conversational</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Education -->
+                <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
+                    <h2 class="text-xl md:text-2xl font-bold mb-4 border-b-2 border-gray-900 dark:border-gray-500 pb-2">Education</h2>
+                    <div class="bg-gray-50 dark:bg-gray-700 rounded-xl p-4 text-sm md:text-base">
+                        <p class="font-bold">B.A. in Economics</p>
+                        <p>Indiana University, Bloomington, IN, US</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-xs mt-1">2005 - 2009</p>
+                    </div>
+                </div>
+                
+                <!-- Personal -->
+                <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
+                    <h2 class="text-xl md:text-2xl font-bold mb-4 border-b-2 border-gray-900 dark:border-gray-500 pb-2">Personal</h2>
+                    <div class="space-y-4">
+                        <p class="text-sm md:text-base">
+                            <strong>Athletics:</strong> Passionate runner with a recent half-marathon personal record of 1:37:28. While running is my current primary focus, I've also enjoyed Brazilian Jiu-Jitsu, swimming, CrossFit, and cycling over the years.
+                        </p>
+                        <p class="text-sm md:text-base">
+                            <strong>Family:</strong> Proud father of two sons, balancing a demanding career with active parenting and personal fitness goals.
+                        </p>
+                    </div>
+                </div>
+            </aside>
         </div>
     </div>
 </body>
